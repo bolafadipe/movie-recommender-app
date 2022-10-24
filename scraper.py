@@ -136,6 +136,10 @@ class MoviesScraper:
         with open('data.txt','w') as data: 
             data.write(str(all_movies))
 
-scraper = MoviesScraper()
-scraper.get_urls()
-scraper.driver.quit()
+        return all_movies
+
+
+if __name__ == '__main__':
+    scraper = MoviesScraper()
+    scraper.get_urls()
+    scraper.driver.quit()

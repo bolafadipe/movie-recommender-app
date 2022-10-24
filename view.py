@@ -1,19 +1,25 @@
 from tkinter import *
-import test2
-
-class Window(Frame):
-
-    def __init__(self, master=None):
-        Frame.__init__(self, master)               
-        self.master = master
-        #self.init_window()
-
-    button = tk.Button(text='click')
+from tkinter import ttk
 
 
-root = Tk()
-root.geometry("400x300")
-if __name__ == '__main__':
-    app = Window(root)
+window = Tk()
 
-    root.mainloop()
+window.title('Movie Recommender App')
+window.geometry('900x600')
+
+# create the frame objects
+
+input_frame = ttk.Frame(window)
+input_frame.grid(column=1, row=0, columnspan=3)
+labl = Label(input_frame, fg='#000', text='hello').pack()
+
+output_frame = ttk.Frame(window)
+output_frame.grid(column=0, row=0, columnspan=9)
+labl2 = Label(output_frame, fg='#253ecd', text='this is for output').pack()
+
+
+
+
+
+
+window.mainloop()
