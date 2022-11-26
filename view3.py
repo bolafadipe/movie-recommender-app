@@ -106,16 +106,10 @@ class SelectGenreFrame(ttk.Frame):
     def get_movies(self):
         #title_label = ttk.Label(self, text='title', font=("Helvetica", 14),foreground ="black",).grid(row=0, column=2, padx=10)
 
-        with open('file.txt', 'r') as f:
+        with open('movies.txt', 'r') as f:
             data = f.read()
             movies = ast.literal_eval(data)
-        
-        
-
-       
-        
-        
-
+    
         for v in movies.values():
             if v['genre'] == self.selection.get():
                 #print(v['genre'])

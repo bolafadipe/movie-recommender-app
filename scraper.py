@@ -102,13 +102,13 @@ class MoviesScraper:
         #print(len(image_urls))
         
         
-        # counter = 0
-        # while counter < len(image_urls):
-        #     for img in image_urls:
-        #         img_str = img.split('/')
-        #         counter += 1
-        #         filename = f'{str(counter)}.{img_str[5][6:11]}'
-        #         urllib.request.urlretrieve(img, f"images/{filename}.jpg")
+        counter = 0
+        while counter < len(image_urls):
+            for img in image_urls:
+                img_str = img.split('/')
+                counter += 1
+                filename = f'{str(counter)}.{img_str[5][6:11]}'
+                urllib.request.urlretrieve(img, f"images/{filename}.jpg")
         
             
 
